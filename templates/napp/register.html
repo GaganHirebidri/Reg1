@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title> UserDemo | Homepage</title>
+{% endblock %}
+
+
+{% block content %}
+    <div class="jumbotron">
+            <form  method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit" value="register" class='btn btn-primary'>
+
+            </form>
+    </div>
+{% endblock %}
